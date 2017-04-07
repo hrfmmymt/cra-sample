@@ -4,7 +4,7 @@ import parse from 'parse-link-header'
 
 // https://github.com/mzabriskie/axios/issues/305#issuecomment-233141731
 // for jest. force the node adapter
-if (process.env.NODE_ENV == "test") {
+if (process.env.NODE_ENV === "test") {
   axios.defaults.adapter = httpAdapter
 }
 

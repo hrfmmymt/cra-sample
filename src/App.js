@@ -3,8 +3,10 @@ import { BrowserRouter as Router, Switch, Route, Link, NavLink, withRouter } fro
 
 import Articles from './Articles'
 
-const Header = ({onClick}) => (
-  <h1 className="text-center" style={{cursor: "pointer" }} onClick={onClick}>Favorite Articles</h1>
+const Header = () => (
+  <h1 className="text-center">
+    <Link to="/">Favorite Articles</Link>
+  </h1>
 )
 
 const Nav = () => (
@@ -14,7 +16,9 @@ const Nav = () => (
   </ul>
 )
 
-const Footer = () => (<p className="text-center">Favorite Articles</p>)
+const Footer = () => (
+  <footer className="text-center">Favorite Articles</footer>
+)
 
 const Routes = withRouter(({history}) => (
   <div className="container">
